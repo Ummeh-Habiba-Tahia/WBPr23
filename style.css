@@ -1,0 +1,60 @@
+#navlist li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+}
+#navlist li, #navlist a{
+    height: 300px;
+    display: block;
+}
+#home{
+    left: 0;
+    background: url(img_navsprites.gif) 0 0;
+    width: 45px;
+    background-repeat: no-repeat;
+}
+#previous{
+    left: 45px;
+     background: url(img_navsprites.gif) -46px 0;
+    width: 45px;
+    background-repeat: no-repeat;
+}
+#next{
+    left: 89px;
+    background: url(img_navsprites.gif) -90px 0;
+    width: 45px;
+    background-repeat: no-repeat;
+}
+.cls1{
+    margin-top: 100px;
+    counter-reset: test;
+}
+h3::before{
+    counter-increment: test;
+    content: "web" counter(test)": ";
+}
+.cls2{
+    margin-top: 200px;
+    counter-reset: main;
+}
+h2::before{
+    counter-increment: main;
+    content: "Main Concept" counter(main)": ";
+}
+h2{
+    counter-reset: sub;
+}
+h4::before{
+    counter-increment: sub;
+    content: counter(main)". "counter(sub)": ";
+}
+ol{
+    counter-reset: list;
+    list-style-type: none;
+}
+li::before{
+   counter-increment: list;
+    content: counters(list,".");
+    
+}
